@@ -1,5 +1,5 @@
 <template>
-    <div class="block" v-if="showBlock" @click="stopTimer">Click me</div>
+    <div class="block" v-if="showBlock" @click="calcResult">Click me</div>
 </template>
 
 <script>
@@ -11,17 +11,12 @@ export default {
     mounted() {
         setTimeout(() => {
             this.showBlock = true;
-            this.startTimer();
+            this.reactionTime = performance.now();
         }, this.delay);
     },
     methods: {
-        startTimer() {
-            this.timer = setInterval(() => {
-                this.reactionTime += 11;
-            }, 11);
-        },
-        stopTimer() {
-            clearInterval(this.timer);
+        calcResult() {
+            this.reactionTime = Math.round(performance.now() - this.reactionTime);
             this.$emit('end', this.reactionTime);
         },
     },
