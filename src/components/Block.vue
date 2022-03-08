@@ -30,12 +30,13 @@ export default {
 
 <style>
 .block {
-    width: 400px;
-    border-radius: 20px;
+    width: 70vw;
+    max-width: 20rem;
+    border-radius: 1.25rem;
     background: #0faf87;
     color: white;
     text-align: center;
-    padding: 100px 0;
-    margin: 40px auto;
+    padding: 6.25rem 0;
+    margin: 2.5rem auto;
 }
 </style>

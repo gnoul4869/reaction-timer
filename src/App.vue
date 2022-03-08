@@ -41,18 +41,18 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #444;
-    margin-top: 60px;
+    margin-top: 3.75rem;
 }
 button {
     background: #0faf87;
     color: white;
     border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    font-size: 16px;
-    letter-spacing: 1px;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    letter-spacing: 0.0625rem;
     cursor: pointer;
-    margin: 10px;
+    margin: 0.625rem;
 }
 button[disabled] {
     opacity: 0.5;
