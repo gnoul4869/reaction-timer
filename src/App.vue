@@ -1,6 +1,6 @@
 <template>
-    <h1>Reaction Time</h1>
-    <button @click="start" :disabled="isPlaying">Play</button>
+    <h1>Reaction Timer</h1>
+    <button @click="start" :disabled="isPlaying">Test now</button>
     <Block v-if="isPlaying" :delay="delay" @end="end" />
     <Result v-if="showResult" :score="score" />
 </template>
