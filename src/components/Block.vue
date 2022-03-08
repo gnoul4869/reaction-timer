@@ -7,8 +7,8 @@ export default {
     props: ['delay'],
     data() {
         return {
-            text: 'Wait for it...',
-            color: 'indianRed',
+            text: null,
+            color: null,
             isCatching: false,
             reactionTime: 0,
             delayTimer: null,
@@ -20,6 +20,8 @@ export default {
     },
     methods: {
         start() {
+            this.text = 'Wait for it...';
+            this.color = 'indianRed';
             this.delayTimer = setTimeout(() => {
                 this.text = 'Click now!';
                 this.color = '#0faf87';
