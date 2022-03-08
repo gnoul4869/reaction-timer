@@ -1,7 +1,7 @@
 <template>
     <h1>Reaction Timer</h1>
-    <button @click="start" :disabled="isPlaying">Test now</button>
-    <Block v-if="isPlaying" :delay="delay" @end="end" />
+    <button @click="start" :disabled="isPlaying">{{ text }}</button>
+    <Block v-if="showBlock" :delay="delay" @end="end" />
     <Result v-if="showResult" :score="score" />
 </template>
 
@@ -13,22 +13,35 @@ export default {
     components: { Block, Result },
     data() {
         return {
+            text: 'Test now',
             isPlaying: false,
+            showBlock: false,
             showResult: false,
             delay: null,
             score: 0,
+            count: 0,
         };
+    },
+    updated() {
+        if (this.count === 0) {
+            this.text = 'Test now';
+        } else this.text = 'Test again';
     },
     methods: {
         start() {
             this.delay = Math.random() * 3000 + 2000;
             this.isPlaying = true;
+            this.showBlock = true;
             this.showResult = false;
         },
         end(reactionTime) {
-            this.score = reactionTime;
+            if (reactionTime !== 0) {
+                this.score = reactionTime;
+                this.showBlock = false;
+                this.showResult = true;
+            }
             this.isPlaying = false;
-            this.showResult = true;
+            this.count++;
         },
     },
 };

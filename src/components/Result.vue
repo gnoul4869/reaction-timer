@@ -15,17 +15,17 @@ export default {
         };
     },
     mounted() {
-        if (this.score < 100) {
+        if (this.score < 150) {
             this.rank = 'Inhuman reaction 👀';
             this.color = '#0faf87';
-        } else if (this.score < 200) {
+        } else if (this.score < 250) {
             this.rank = "That's fast 😲";
             this.color = 'green';
-        } else if (this.score < 400) {
-            this.rank = 'Nice reaction 😉';
+        } else if (this.score < 350) {
+            this.rank = 'Nice reaction time 😉';
             this.color = 'orange';
         } else {
-            this.rank = 'Is that your fastest reaction? 😳';
+            this.rank = 'Is that your fastest reaction time? 😳';
             this.color = 'red';
         }
     },
