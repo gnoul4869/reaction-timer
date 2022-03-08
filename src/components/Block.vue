@@ -12,11 +12,12 @@ export default {
         setTimeout(() => {
             this.showBlock = true;
             this.reactionTime = performance.now();
+            console.log(this.reactionTime);
         }, this.delay);
     },
     methods: {
         calcResult() {
-            this.reactionTime = Math.round(performance.now() - this.reactionTime);
+            this.reactionTime = Math.round(performance.now() - this.reactionTime - 16 - 30);
             this.$emit('end', this.reactionTime);
         },
     },
