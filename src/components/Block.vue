@@ -36,7 +36,9 @@ export default {
     background: #0faf87;
     color: white;
     text-align: center;
-    padding: 6.25rem 0;
+    font-size: 1.6rem;
+    padding: 5rem 0;
     margin: 2.5rem auto;
+    cursor: pointer;
 }
 </style>

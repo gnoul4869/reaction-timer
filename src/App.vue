@@ -52,7 +52,7 @@ button {
     font-size: 1rem;
     letter-spacing: 0.0625rem;
     cursor: pointer;
-    margin: 0.625rem;
+    margin: 3.125rem;
 }
 button[disabled] {
     opacity: 0.5;
