@@ -31,7 +31,9 @@ export default {
         },
         calcResult() {
             if (this.isCatching) {
-                this.reactionTime = Math.round(performance.now() - this.reactionTime - 16 - 30);
+                const result = Math.round(performance.now() - this.reactionTime);
+                const estimatedResult = result - 16 - 30;
+                this.reactionTime = estimatedResult < 1 ? result : estimatedResult;
                 this.$emit('end', this.reactionTime);
             } else {
                 clearTimeout(this.delayTimer);
