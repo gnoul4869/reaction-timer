@@ -26,9 +26,7 @@ export default {
         };
     },
     updated() {
-        if (this.count === 0) {
-            this.text = 'Test now';
-        } else this.text = 'Test again';
+        this.count === 0 ? (this.text = 'Test now') : (this.text = 'Test again');
     },
     methods: {
         start() {
