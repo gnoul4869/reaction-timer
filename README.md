@@ -1,6 +1,16 @@
 # reaction-timer
 
-This template should help get you started developing with Vue 3 in Vite.
+<pre>
+Reaction Timer (03/2022):
+
+"Reaction Timer web application to test your reaction time"
+
+Languages: JavaScript, HTML, CSS
+Framework: Vue.js
+Host: Netlify
+
+-> <a href="https://reaction-timer-v1.netlify.app/" target="_blank">Reaction Timer</a>
+</pre>
 
 ## Recommended IDE Setup
 
